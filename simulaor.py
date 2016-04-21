@@ -9,7 +9,8 @@ FIXTURES_PATH = "fixtures"
 language_to_port = {'go':'3000',
 					'python':'5000',
 					'js':'7000',
-					'CSharp':'11903'}
+					'CSharp':'11903',
+					'java': '4567'}
 url = 'http://localhost:{port}/upload'
 
 for language in language_to_port.keys():

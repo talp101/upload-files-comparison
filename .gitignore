@@ -5,6 +5,10 @@ python/uploads
 js/uploads
 CSharp/uploads
 go/uploads
+java/.idea/
+java/target/
+java/uploads/
+
 
 # User-specific files
 *.suo
