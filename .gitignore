@@ -1,7 +1,16 @@
 .DS_STORE
 js/node_modules/
 
+# User-specific files
 *.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -12,9 +21,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-*.[Cc]ache
-!*.[Cc]ache/
-.vs/
+
 *_i.c
 *_p.c
 *_i.h
@@ -39,9 +46,28 @@ bld/
 *.pidb
 *.svclog
 *.scc
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
 **/packages/*
+# except build/, which is used as an MSBuild target.
 !**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+# NuGet v3's project.json files produces more ignoreable files
 *.nuget.props
 *.nuget.targets
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
 
 .idea/
