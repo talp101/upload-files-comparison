@@ -1,5 +1,10 @@
 .DS_STORE
 js/node_modules/
+*.py[ocd]
+python/uploads
+js/uploads
+CSharp/uploads
+go/uploads
 
 # User-specific files
 *.suo
