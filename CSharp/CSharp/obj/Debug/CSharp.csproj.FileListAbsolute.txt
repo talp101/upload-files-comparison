@@ -1,0 +1,14 @@
+C:\workspace\upload-files-comparison\CSharp\CSharp\bin\CSharp.dll.config
+C:\workspace\upload-files-comparison\CSharp\CSharp\bin\CSharp.dll
+C:\workspace\upload-files-comparison\CSharp\CSharp\bin\CSharp.pdb
+C:\workspace\upload-files-comparison\CSharp\CSharp\bin\Newtonsoft.Json.dll
+C:\workspace\upload-files-comparison\CSharp\CSharp\bin\System.Net.Http.Formatting.dll
+C:\workspace\upload-files-comparison\CSharp\CSharp\bin\System.Web.Http.dll
+C:\workspace\upload-files-comparison\CSharp\CSharp\bin\System.Web.Http.WebHost.dll
+C:\workspace\upload-files-comparison\CSharp\CSharp\bin\Newtonsoft.Json.xml
+C:\workspace\upload-files-comparison\CSharp\CSharp\bin\System.Net.Http.Formatting.xml
+C:\workspace\upload-files-comparison\CSharp\CSharp\bin\System.Web.Http.xml
+C:\workspace\upload-files-comparison\CSharp\CSharp\bin\System.Web.Http.WebHost.xml
+C:\workspace\upload-files-comparison\CSharp\CSharp\obj\Debug\CSharp.csprojResolveAssemblyReference.cache
+C:\workspace\upload-files-comparison\CSharp\CSharp\obj\Debug\CSharp.dll
+C:\workspace\upload-files-comparison\CSharp\CSharp\obj\Debug\CSharp.pdb
