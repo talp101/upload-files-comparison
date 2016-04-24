@@ -2,6 +2,8 @@ package main
 
 import (
 	"github.com/go-martini/martini"
+	"github.com/nu7hatch/gouuid"
+	"encoding/json"
 	"net/http"
   "io"
 	"os"
@@ -9,18 +11,19 @@ import (
 
 func main() {
 	m := martini.Classic()
-	m.Post("/upload", func(r *http.Request) (int, string) {
-		err := r.ParseMultipartForm(100000)
+	m.Post("/upload", func(req *http.Request) (int, string) {
+		err := req.ParseMultipartForm(100000)
 		if err != nil {
 			return http.StatusInternalServerError, err.Error()
 		}
-		files := r.MultipartForm.File["files"]
+		files := req.MultipartForm.File["files"]
 		file, err := files[0].Open()
 		defer file.Close()
 		if err != nil {
 			return http.StatusInternalServerError, err.Error()
 		}
-		dst, err := os.Create("./uploads/" + files[0].Filename)
+		fileName, err := uuid.NewV4()
+		dst, err := os.Create("./uploads/" + fileName.String())
 		defer dst.Close()
 		if err != nil {
 			return http.StatusInternalServerError, err.Error()
@@ -28,9 +31,8 @@ func main() {
     if _, err := io.Copy(dst, file); err != nil {
 			return http.StatusInternalServerError, err.Error()
 		}
-
-		return 204, "ok"
+		jsonResponse, err := json.Marshal(map[string]string{"file_name": fileName.String()})
+		return 200,string(jsonResponse)
 	})
-
 	m.Run()
 }
