@@ -1,5 +1,8 @@
 import os
-from flask import Flask, request, redirect, url_for
+import json
+from uuid import uuid4
+
+from flask import Flask, request, redirect, url_for, jsonify
 from werkzeug import secure_filename
 
 UPLOAD_FOLDER = './uploads'
@@ -12,8 +15,9 @@ def upload_file():
     if request.method == 'POST':
         uploaded_file = request.files['files']
         if uploaded_file:
-            uploaded_file.save(os.path.join(app.config['UPLOAD_FOLDER'], uploaded_file.filename))
-            return 'ok', 204
+            file_name = str(uuid4())
+            uploaded_file.save(os.path.join(app.config['UPLOAD_FOLDER'], file_name))
+            return jsonify({'file_name':file_name })
 
 if __name__ == "__main__":
     app.run()
