@@ -3,7 +3,7 @@ js/node_modules/
 *.py[ocd]
 python/uploads
 js/uploads
-CSharp/uploads
+**/CSharp/uploads
 go/uploads
 java/.idea/
 java/target/
